@@ -10,13 +10,14 @@ pipeline {
 
         stage('Create Application Infra') {
             steps {
-                dir('applicationinfra') {
+                 
                     sh ''' 
+                    cd applicationinfra
                     terraform init
                     terraform plan
                     terraform apply -auto-approve
                     '''
-                }
+                
             }
         }
     }
