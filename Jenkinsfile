@@ -7,6 +7,7 @@ pipeline{
             choices: ['apply', 'destroy'],
             description: 'Select Terraform action'
         )
+    }
 
     stages {
         stage('Checkout') {
@@ -32,4 +33,4 @@ pipeline{
         }
     }
   }
-}
+
